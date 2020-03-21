@@ -24,8 +24,8 @@ axios
     // console.log(response);
     let data = response.data.articles
 
-      for(let key in data){
-        data[key].forEach(x =>{
+      for(let item in data){
+        data[item].forEach(x =>{
           let cards = document.querySelector('.cards-container')
           cards.appendChild(articleCard(x))
         });
@@ -33,8 +33,8 @@ axios
   })
 
   .catch(err => {
-    console.log('Somethings Wrong', err)
-  })
+    console.log('Somethings Wrong', err);
+  });
 
 
 function articleCard(data){

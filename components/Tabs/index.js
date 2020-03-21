@@ -16,7 +16,10 @@ axios
   .then(response => {
       tabCard(response.data);
 
-});
+    })
+  .catch(err => {
+    console.log('Something Bad Happened', err);
+  });
 
 
 
@@ -30,5 +33,5 @@ function tabCard(data){
     card.classList.add('tab');
     card.appendChild(document.createTextNode(x));
     topics.appendChild(card);
-  })
+  });
 }
