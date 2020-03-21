@@ -15,8 +15,8 @@ axios
   .get('https://lambda-times-backend.herokuapp.com/topics')
   .then(response => {
       tabCard(response.data);
-  });
 
+});
 
 
 
